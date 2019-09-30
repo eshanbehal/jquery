@@ -35,12 +35,16 @@
 <div class="fb">
     
     <p>Facebook is a <span class="grt">great</span></p>
+    <p class="orange">paragraph 2</p>
     
     </div>
     
 <div class="apl">
     
     <p>Apple</p>
+    <p><a>this is a link</a></p>
+    
+    <p><a>this is another link</a></p>
     
     </div>    
 <div class="msoft">
@@ -61,6 +65,13 @@
             
             $("p").css("text-align" , "center");
             
+            $(".grt").css("background-color", "#6acf57");
+            $(".orange").css("background-color", "#6acb57");
+            
+            $("div.apl").css("font-family", "tahoma");
+            
+            $("p:first-child, p:last-child").css("text-decoration", "underline");
+        
         });
     </script>
 </body>
