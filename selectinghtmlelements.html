@@ -10,13 +10,13 @@
     }
     .apl{
         background-color: blueviolet;
-        height: 100px;
+        height: 300px;
         width: auto;
         color: brown;
     }
     .msoft{
         background-color: burlywood;
-        height: 100px;
+        height: 400px;
         widows: auto;
         color: aliceblue;
     }
@@ -46,10 +46,122 @@
     
     <p><a>this is another link</a></p>
     
+    <ul>
+ <li>
+ BMW
+ </li>
+
+ <li>
+ Audi
+ </li>
+
+ <li>
+ Mercedes
+ </li>
+
+ </ul>
+ <p>
+ <a href="http://www.google.com">
+ This is a link
+ </a>
+ </p>
+ <p>
+ <a href="http://www.microsoft.com">
+ This is another link
+ </a>
+ </p>
+    
     </div>    
 <div class="msoft">
     
     <p>Microsoft</p>
+    
+    <ul>
+
+
+ </ul>
+ <table>
+ <tr>
+ <th>
+ Phone Make
+ </th>
+ <th>
+ Model
+ </th>
+ <th>
+ Model
+ </th>
+ </tr>
+
+ <tr>
+ <td>
+ Apple
+ </td>
+ <td>
+ Iphone 4
+ </td>
+ <td>
+ 16Go
+ </td>
+ </tr>
+
+ <tr>
+ <td>
+ Apple
+ </td>
+ <td>
+ Iphone 4
+ </td>
+ <td>
+ 16Go
+ </td>
+ </tr>
+
+ <tr>
+ <td>
+ Apple
+ </td>
+ <td>
+ Iphone 4
+ </td>
+ <td>
+ 16Go
+ </td>
+ </tr>
+
+ <tr>
+ <td>
+ Apple
+ </td>
+ <td>
+ Iphone 4
+ </td>
+ <td>
+ 16Go
+ </td>
+ </tr>
+
+ <tr>
+ <td>
+ Apple
+ </td>
+ <td>
+ Iphone 4
+ </td>
+ <td>
+ 16Go
+ </td>
+ </tr>
+
+ </table>
+    
+    <p>
+ Type your name:
+ <input>
+ <button type="submit">
+ Submit
+ </button>
+ </p>
     
     </div> 
     
@@ -71,6 +183,12 @@
             $("div.apl").css("font-family", "tahoma");
             
             $("p:first-child, p:last-child").css("text-decoration", "underline");
+            $("[href]").css("text-decoration", "underline");
+            $("tr:even").css("text-decoration", "underline");
+            $(":input").css("text-decoration", "underline");
+            $("div:has(table)").css("text-decoration", "underline");
+            
+            
         
         });
     </script>
