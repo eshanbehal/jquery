@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head>
-<title>internal css....</title>
+<title>selecting html elements in jquery.</title>
 <style>
     .fb{
         background-color: #e8cc16;
@@ -27,6 +27,8 @@
         
         
     </style>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 <body>
     
@@ -45,5 +47,20 @@
     
     <p>Microsoft</p>
     
-    </div>    
+    </div> 
+    
+    <script>
+    
+        $(function(){
+            
+//           $("*").css("font-size" , "40px"); 
+            
+//            $("p").css("text-align" , "center");
+            
+//            $("div > p").css("text-align" , "center");
+            
+            $("p").css("text-align" , "center");
+            
+        });
+    </script>
 </body>
