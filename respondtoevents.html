@@ -168,11 +168,39 @@
     <script>
     
         $(function(){
-           $("p").click(function(){
-               
-//               $("p").css("background-color", "#b58b8b");
-               $(this).css("background-color", "#de3f3f");
-           }); 
+//           $("p").click(function(){
+//               
+////               $("p").css("background-color", "#b58b8b");
+////               $(this).css("background-color", "#de3f3f");
+//           }); 
+            
+            $("p").mouseover(function(){
+                
+                $(this).css("background-color", "#0da956");
+            });
+            $("p").mouseout(function(){
+                
+                $(this).css("background-color", "");
+            });
+            $("input").focus(function(){
+                
+                $(this).css("background-color", "#ca34c0");
+            });
+            $("input").blur(function(){
+                
+                $(this).css("background-color", "#ffffff");
+            });
+            $("input").keyup(function(){
+                
+                $(this).css("background-color", "#f0a7eb");
+            });
+            $("#submit").click(function(){
+                
+                $("#input").css("background-color", "#ffffff");
+                
+            $("#input").val("");
+            });
+            
         });
     </script>
 </body>
