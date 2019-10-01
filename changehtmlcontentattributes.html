@@ -16,7 +16,7 @@
     }
     .msoft{
         background-color: burlywood;
-        height: 100px;
+        height: auto;
         widows: auto;
         color: aliceblue;
     }
@@ -78,7 +78,7 @@
     </div>    
 <div class="msoft" id="msoft">
     
-    <p>Microsoft</p>
+    <p id="microsoftParagraph">Microsoft</p>
     
     <p><a href="http://www.microsoft.com" title="microsoft site" id="microsoftLink">microsoft link</a></p>
 
@@ -91,6 +91,7 @@
     <button id="changeApple">change apple html.</button>
     <button id="changeInput">change input content.</button>
     <button id="changeMicrosoft">change microsoft content.</button>
+    <button id="addText">add text.</button>
     
     <script>
     
@@ -111,6 +112,15 @@
             
             $("#changeMicrosoft").click(function(){
                 $("#microsoftLink").attr({"href" : "http://www.google.com", "title" : "google"});
+            });
+            
+            $("#addText").click(function(){
+                
+//                $("#msoft").append("<p>new paragraph.</p>");
+                
+//                 $("#msoft").prepend("<p>new paragraph.</p>");
+                
+                $("#microsoftParagraph").after("<p>hey there...</p>");
             });
         
             
