@@ -38,7 +38,7 @@
     
 <div class="fb" id="fb">
     
-    <p>Facebook is a <span class="grt">great</span></p>
+    <p>Facebook is a <span class="grt" id="grt">great</span></p>
 
     </div>
     
@@ -61,10 +61,13 @@
     
     <button id="changeFacebook">change facebook content.</button>
     <button id="changeApple">change apple html.</button>
+    <button id="changeMicrosoft">change microsoft content.</button>
+    <button id="showMicrosoft">show microsoft content.</button>
+    <button id="changeGreat">change great content.</button>
 <!--
     
     <button id="changeInput">change input content.</button>
-    <button id="changeMicrosoft">change microsoft content.</button>
+    
     <button id="addText">add text.</button>
 -->
     
@@ -93,6 +96,26 @@
                 $("#apl").css({'top': 200*Math.random(), 'left': 200*Math.random(), 'background-color': 'rgb(' + Math.floor(256*Math.random()) + ',' + Math.floor(256*Math.random()) + ',' + Math.floor(256*Math.random()) + ')'});
                 
             });
+            
+        $("#changeMicrosoft").click(function(){
+            
+            $("#msoft").toggleClass("msoft");
+        });
+            
+            $("#msoft").dblclick(function(){
+                $(this).hide();
+            });
+            
+            $("#showMicrosoft").click(function(){
+            
+            $("#msoft").show();
+        });
+            
+            $("#changeGreat").click(function(){
+            
+            $("#grt").wrap("<div></div>");
+        });
+            
         });
     </script>
 </body>
