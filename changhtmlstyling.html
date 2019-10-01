@@ -24,6 +24,10 @@
         background-color: aqua;
         color: beige;
     }
+    
+    .sans-serif{
+        font-family: sans-serif;
+    }
         
         
     </style>
@@ -38,7 +42,7 @@
 
     </div>
     
-<div class="apl" id="appl">
+<div class="apl sans-serif" id="appl">
     
     <p>Apple</p>
 
@@ -56,8 +60,9 @@
     <p>Enter your name here: <input></p>
     
     <button id="changeFacebook">change facebook content.</button>
-<!--
     <button id="changeApple">change apple html.</button>
+<!--
+    
     <button id="changeInput">change input content.</button>
     <button id="changeMicrosoft">change microsoft content.</button>
     <button id="addText">add text.</button>
@@ -69,8 +74,20 @@
             $("#changeFacebook").click(function(){
                 
                 $("#fb").css("width", 100*Math.random()-50 + $("#fb").width());
+                
+            $("#fb").addClass("msoft");
+                
+//                window.alert($("#fb").innerHeight());
+                
+//                window.alert($("#fb").outerHeight());
+
+            
             });
-        
+            
+            $("#changeApple").click(function(){
+                
+                $("#appl").removeClass("sans-serif");
+            });
         });
     </script>
 </body>
