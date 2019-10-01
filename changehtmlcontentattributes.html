@@ -10,13 +10,13 @@
     }
     .apl{
         background-color: blueviolet;
-        height: 300px;
+        height: 100px;
         width: auto;
         color: brown;
     }
     .msoft{
         background-color: burlywood;
-        height: 400px;
+        height: 100px;
         widows: auto;
         color: aliceblue;
     }
@@ -32,14 +32,14 @@
 </head>
 <body>
     
-<div class="fb">
+<div class="fb" id="fb">
     
     <p>Facebook is a <span class="grt">great</span></p>
 <!--    <p class="orange">paragraph 2</p>-->
     
     </div>
     
-<div class="apl">
+<div class="apl" id="appl">
     
     <p>Apple</p>
 <!--
@@ -76,106 +76,27 @@
 -->
     
     </div>    
-<div class="msoft">
+<div class="msoft" id="msoft">
     
     <p>Microsoft</p>
-<!--
-    
-    <ul>
 
-
- </ul>
- <table>
- <tr>
- <th>
- Phone Make
- </th>
- <th>
- Model
- </th>
- <th>
- Model
- </th>
- </tr>
-
- <tr>
- <td>
- Apple
- </td>
- <td>
- Iphone 4
- </td>
- <td>
- 16Go
- </td>
- </tr>
-
- <tr>
- <td>
- Apple
- </td>
- <td>
- Iphone 4
- </td>
- <td>
- 16Go
- </td>
- </tr>
-
- <tr>
- <td>
- Apple
- </td>
- <td>
- Iphone 4
- </td>
- <td>
- 16Go
- </td>
- </tr>
-
- <tr>
- <td>
- Apple
- </td>
- <td>
- Iphone 4
- </td>
- <td>
- 16Go
- </td>
- </tr>
-
- <tr>
- <td>
- Apple
- </td>
- <td>
- Iphone 4
- </td>
- <td>
- 16Go
- </td>
- </tr>
-
- </table>
-    
-    <p>
- Type your name:
- <input>
- <button type="submit">
- Submit
- </button>
- </p>
--->
     
     </div> 
+    
+    <button id="changeFacebook">change facebook content.</button>
+    <button id="changeApple">change apple html.</button>
     
     <script>
     
         $(function(){
             
-
+        $("#changeFacebook").click(function(){
+            $("#fb").text("this is a facebook content change text");
+        });
+            
+            $("#changeApple").click(function(){
+            $("#appl").html("<p>this is a facebook content change text</p><p>hey guys....</p>");
+        });
         
             
         
