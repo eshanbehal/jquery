@@ -55,8 +55,8 @@
     
     <p>Enter your name here: <input></p>
     
-<!--
     <button id="changeFacebook">change facebook content.</button>
+<!--
     <button id="changeApple">change apple html.</button>
     <button id="changeInput">change input content.</button>
     <button id="changeMicrosoft">change microsoft content.</button>
@@ -66,7 +66,10 @@
     <script>
     
         $(function(){
-            
+            $("#changeFacebook").click(function(){
+                
+                $("#fb").css("width", 100*Math.random()-50 + $("#fb").width());
+            });
         
         });
     </script>
