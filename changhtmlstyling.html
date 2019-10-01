@@ -42,7 +42,7 @@
 
     </div>
     
-<div class="apl sans-serif" id="appl">
+<div class="apl" id="apl">
     
     <p>Apple</p>
 
@@ -86,7 +86,12 @@
             
             $("#changeApple").click(function(){
                 
-                $("#appl").removeClass("sans-serif");
+                $("#apl").removeClass("sans-serif");
+                
+                $("#apl").css("position", "absolute");
+                
+                $("#apl").css({'top': 200*Math.random(), 'left': 200*Math.random(), 'background-color': 'rgb(' + Math.floor(256*Math.random()) + ',' + Math.floor(256*Math.random()) + ',' + Math.floor(256*Math.random()) + ')'});
+                
             });
         });
     </script>
