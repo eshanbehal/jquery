@@ -79,12 +79,18 @@
 <div class="msoft" id="msoft">
     
     <p>Microsoft</p>
+    
+    <p><a href="http://www.microsoft.com" title="microsoft site" id="microsoftLink">microsoft link</a></p>
 
     
     </div> 
     
+    <p>Enter your name here: <input></p>
+    
     <button id="changeFacebook">change facebook content.</button>
     <button id="changeApple">change apple html.</button>
+    <button id="changeInput">change input content.</button>
+    <button id="changeMicrosoft">change microsoft content.</button>
     
     <script>
     
@@ -97,6 +103,15 @@
             $("#changeApple").click(function(){
             $("#appl").html("<p>this is a facebook content change text</p><p>hey guys....</p>");
         });
+            
+            $("#changeInput").click(function(){
+                
+                $("input").val("eshan behal");
+            });
+            
+            $("#changeMicrosoft").click(function(){
+                $("#microsoftLink").attr({"href" : "http://www.google.com", "title" : "google"});
+            });
         
             
         
