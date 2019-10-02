@@ -24,11 +24,6 @@
         background-color: aqua;
         color: beige;
     }
-    
-    .sans-serif{
-        font-family: sans-serif;
-    }
-        
         
     </style>
     
@@ -40,26 +35,30 @@
 </head>
 <body>
     
-<div class="fb" id="fb">
+<div class="fb ui-corner-all" id="fb">
     
     <p>Facebook is a <span class="grt" id="grt">great</span></p>
 
     </div>
     
-<div class="apl" id="apl">
+<div class="apl ui-corner-all" id="apl">
     
     <p>Apple</p>
 
  
     </div> 
     
-<div class="msoft" id="msoft">
+<div class="msoft ui-corner-all" id="msoft">
     
     <p id="microsoftParagraph">Microsoft</p>
     
     <p><a href="http://www.microsoft.com" title="microsoft site" id="microsoftLink">microsoft link</a></p>
 
     </div> 
+    
+    <div class="ui-state-error" style="width: 200px; height:200px; margin-top: 10px">
+    <p>error message:</p>
+    </div>
     
     <p>Enter your name here: <input></p>
     
@@ -80,7 +79,7 @@
     <script>
     
         $(function(){
-            
+            $("#fb").draggable();
             
         });
     </script>
