@@ -59,8 +59,12 @@
     
     <p>Enter your name here: <input></p>
     
+    <button id="fadeOutFacebook">fadeOut facebook content.</button>
+    <button id="fadeInFacebook">fadeIn facebook content.</button>
+    <button id="fadeToggle">fadetoogle facebook content.</button>
+    
 <!--
-    <button id="changeFacebook">change facebook content.</button>
+    
     <button id="changeApple">change apple html.</button>
     <button id="changeMicrosoft">change microsoft content.</button>
     <button id="showMicrosoft">show microsoft content.</button>
@@ -77,7 +81,24 @@
     
         $(function(){
             
+           $("#fadeOutFacebook").click(function(){
+               
+               $("#fb").fadeOut(1000, function(){
+                   window.alert("hey eshan here!!!");
+               });
+           });
             
+            $("#fadeInFacebook").click(function(){
+               
+               $("#fb").fadeIn(2000);
+            });
+            
+            $("#fadeToggle").click(function(){
+               
+               $("#fb").fadeToggle(1000);
+               $("#apl").fadeToggle(2000);
+               $("#msoft").fadeToggle(3000);
+            });
         });
     </script>
 </body>
