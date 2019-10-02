@@ -59,8 +59,10 @@
     
     <p>Enter your name here: <input></p>
     
+    <button id="button">button</button>
+    
 <!--
-    <button id="changeFacebook">change facebook content.</button>
+    
     <button id="changeApple">change apple html.</button>
     <button id="changeMicrosoft">change microsoft content.</button>
     <button id="showMicrosoft">show microsoft content.</button>
@@ -77,7 +79,15 @@
     
         $(function(){
            
+          $("#fb").load("ajax/somedata.txt");  
+          $("#apl").load("ajax/somedata.txt #paragraph1"); 
             
+           $("button").click(function(){
+               
+               $.ajax({url : "ajax/somedata.txt", success: function(data){
+                   $("#msoft").html(data);
+               }});
+           }); 
         });
     </script>
 </body>

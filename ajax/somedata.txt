@@ -1,2 +1,2 @@
-<p id="paragraph1">this is some data</p>;
-<p id="paragraph2">this is some another data</p>;
+<p id="paragraph1">this is some data</p>
+<p id="paragraph2">this is some another data</p>
