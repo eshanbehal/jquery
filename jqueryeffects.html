@@ -62,6 +62,7 @@
     <button id="fadeOutFacebook">fadeOut facebook content.</button>
     <button id="fadeInFacebook">fadeIn facebook content.</button>
     <button id="fadeToggle">fadetoogle facebook content.</button>
+    <button id="animate">animate facebook content.</button>
     
 <!--
     
@@ -98,6 +99,19 @@
                $("#fb").fadeToggle(1000);
                $("#apl").fadeToggle(2000);
                $("#msoft").fadeToggle(3000);
+            });
+            
+//            $("#animate").click(function(){
+//                
+//                $("#fb").animate({width: '200px', height:'300px', opacity:'0.5'},2000);
+//            });
+            
+            $("#animate").click(function(){
+                
+                $("#fb").animate({width: '200px'},1000);
+                $("#fb").animate({height: '200px'},2000);
+                $("#fb").animate({width: '300px'},3000);
+                $("#fb").delay(2000).animate({height: '100px'},"slow");
             });
         });
     </script>
