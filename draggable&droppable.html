@@ -52,6 +52,14 @@
 <div class="apl ui-corner-all" id="apl">
     
     <p>Apple</p>
+    <ul id="list"><li>eggs</li>
+    <li>milk</li>
+    <li>bread</li>
+    
+    
+    
+    
+    </ul>
 
  
     </div> 
@@ -64,7 +72,7 @@
 
     </div> 
     
-    <div id="droppable" class="ui-corner-all">you can drop things here!!!</div>
+    <div id="droppable" class="ui-corner-all"><p>you can drop things here!!!</p></div>
     
     <div class="ui-state-error" style="width: 200px; height:200px; margin-top: 10px">
     <p>error message:</p>
@@ -119,13 +127,22 @@
             });
             
             $("#droppable").droppable({
-                drop: function(){
+                drop: function(event, ui){
                     
                 $(this).css("background-color","#6330b0");
+                    
+                $(this).find("p").remove();
+                
+                $("<div></div>").text(ui.draggable.text()).appendTo(this);
                 },
                 
-                accept: "#fb"
-            })
+                accept: "#list li"
+            });
+            
+            $("#list").find("li").draggable({
+                helper: "clone",
+                appendTo: "body"
+            });
             
         });
     </script>
