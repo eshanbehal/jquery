@@ -10,23 +10,23 @@ src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jq
 uery.min.js">
 </script>
 <style>
-.bluebox{
+.fb{
 background-color: #3A5795;
 color: white;
 height: 100px;
 width:auto;
 }
-.yellowbox{
+.apl{
 background-color: rgb(222, 224, 85);
 height: 100px;
 width: auto;
 }
-.greenbox{
+.msoft{
 background-color: #31af37;
 height: 100px;
 width: auto;
 }
-#great{
+#grt{
 background-color: #5a3479;
 }
 /*
@@ -50,23 +50,23 @@ src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3
 </script>
 </head>
 <body>
-<div class="bluebox ui-corner-all" id="facebook">
+<div class="fb ui-corner-all" id="fb">
 <p>
 Facebook is
-<span class="great" id="great">
+<span class="grt" id="grt">
 great
 </span>
 .
 </p>
 </div>
 <div id="container">
-<div class="yellowbox ui-corner-all" id="apple">
+<div class="apl ui-corner-all" id="apl">
 <p>
 Apple.
 </p>
 </div>
 </div>
-<div class="greenbox ui-corner-all" id="microsoft">
+<div class="msoft ui-corner-all" id="msoft">
 <p>
 Microsoft.
 </p>
@@ -80,7 +80,14 @@ Microsoft link.
 <script>
 $(function(){
 
-    
+    $("#fb").resizable({
+        minHeight: 100,
+        maxHeight: 300,
+        minWidth: 200,
+        maxWidth: 400,
+        aspectRatio: 4/3,
+        ghost: true
+    });
 });
 </script>
 </body>
