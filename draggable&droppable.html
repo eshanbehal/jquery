@@ -77,6 +77,8 @@
 -->
     
     <script>
+        
+        var message =["please!","leave me alone!","drop me!","come on!"];
     
         $(function(){
             $("#fb").draggable();
@@ -95,10 +97,15 @@
                 drag: function(){
                     
                     $("#msoft").css("background-color",'rgb('+ Math.floor(256*Math.random()) + ',' + Math.floor(256*Math.random()) + ',' + Math.floor(256*Math.random()) + ')');
+                    
+                    $("#msoft").find("p").html(message[Math.floor(4*Math.random())]);
                 },
                 
                 stop: function(){
                     $("#apl").css("background-color","#acbe0d");
+                    $("#msoft").html("<p>finally!!</p>");
+                    
+                    
                 
                 }
             });
