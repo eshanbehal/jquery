@@ -29,13 +29,11 @@ width: auto;
 #grt{
 background-color: #5a3479;
 }
-/*
 #container{
 width: 300px;
 height: 300px;
 border-style: dotted;
 }
-*/
 </style>
 <script
 src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jq
@@ -86,7 +84,13 @@ $(function(){
         minWidth: 200,
         maxWidth: 400,
         aspectRatio: 4/3,
-        ghost: true
+        ghost: true,
+        alsoResize: "#msoft"
+    });
+    
+    $("#apl").resizable({
+        containment: "#container",
+        animate: true
     });
 });
 </script>
