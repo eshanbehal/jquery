@@ -24,6 +24,14 @@
         background-color: aqua;
         color: beige;
     }
+    
+    #droppable{
+        background-color: bisque;
+        color: white;
+        height: 500px;
+        width: auto;
+        margin-top: 10px;
+    }
         
     </style>
     
@@ -55,6 +63,8 @@
     <p><a href="http://www.microsoft.com" title="microsoft site" id="microsoftLink">microsoft link</a></p>
 
     </div> 
+    
+    <div id="droppable" class="ui-corner-all">you can drop things here!!!</div>
     
     <div class="ui-state-error" style="width: 200px; height:200px; margin-top: 10px">
     <p>error message:</p>
@@ -105,10 +115,17 @@
                     $("#apl").css("background-color","#acbe0d");
                     $("#msoft").html("<p>finally!!</p>");
                     
-                    
-                
                 }
             });
+            
+            $("#droppable").droppable({
+                drop: function(){
+                    
+                $(this).css("background-color","#6330b0");
+                },
+                
+                accept: "#fb"
+            })
             
         });
     </script>
