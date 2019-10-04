@@ -24,7 +24,7 @@ padding: 10px;
 }
 .msoft{
 background-color: #31af37;
-height: 100px;
+height: auto;
 width: auto;
 }
 #grt{
@@ -88,7 +88,13 @@ Microsoft link.
 <script>
 $(function(){
 
-   $("#list").selectable();    
+   $("#list").selectable({
+       stop: function(){
+           $(".ui-selected").each(function(){
+              $('<p></p>').text($(this).text()).appendTo("#msoft"); 
+           });
+       }
+   });    
 });
 </script>
 </body>
