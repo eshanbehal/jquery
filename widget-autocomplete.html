@@ -27,6 +27,16 @@ background-color: #31af37;
 height: auto;
 width: auto;
 }
+    .ui-autocomplete{
+        max-height: 300px;
+        overflow-y: auto;
+        max-width: 100px;
+    }
+    
+    #city{
+        width: 200px;
+    }
+
 </style>
 <script
 src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jq
@@ -64,7 +74,12 @@ Microsoft link.
 </div>
 <script>
 $(function(){
-  
+  $("#city").autocomplete({
+      source: ["london", "pathankot", "jalandhar", "madrid", "ludhiana",
+               "london", "pathankot", "jalandhar", "madrid", "ludhiana",
+               "london", "pathankot", "jalandhar", "madrid", "ludhiana",
+               "london", "pathankot", "jalandhar", "madrid", "ludhiana"]
+  });
     
 });
 </script>
