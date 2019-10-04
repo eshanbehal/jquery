@@ -67,10 +67,10 @@ great
 </div>
 <div id="container">
 <div class="apl ui-corner-all" id="apl">
-<ul id="list">
+<ul id="list1" class="connectedWith">
     <li class="ui-state-default">audi</li>
     <li class="ui-state-default">bmw</li>
-    <li class="ui-state-default">mercedes</li>
+    <li class="ui-state-default notSortable">mercedes</li>
     </ul>
 </div>
 </div>
@@ -78,6 +78,11 @@ great
 <p>
 Microsoft.
 </p>
+    <ul id="list2" class="connectedWith">
+    <li class="ui-state-default">ferrari</li>
+    <li class="ui-state-default">maruti suzuki</li>
+    <li class="ui-state-default">toyota</li>
+    </ul>
 <p>
 <a id="microsoftLink"
 href="http://www.microsoft.com" title="Microsoft">
@@ -87,7 +92,18 @@ Microsoft link.
 </div>
 <script>
 $(function(){
-
+  
+    $("#list1").sortable({
+        placeHolder : "ui-state-highlight",
+        cancel: ".notSortable"
+    });
+    
+    $("#list2").sortable();
+        $("#list1, #list2").sortable({
+        
+        connectWith:".connectedWith"
+    });
+             
    
 });
 </script>
