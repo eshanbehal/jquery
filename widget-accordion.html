@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>
-jquery ui widget- accordion.
+widget-accordion in jquery.
 </title>
 <script
 src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jq
@@ -20,16 +20,13 @@ width:auto;
 background-color: rgb(222, 224, 85);
 height: auto;
 width: auto;
+padding: 10px;
 }
 .msoft{
 background-color: #31af37;
 height: auto;
 width: auto;
 }
-#grt{
-background-color: #5a3479;
-}
-
 </style>
 <script
 src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jq
@@ -45,17 +42,16 @@ src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3
 </head>
 <body>
 <div class="fb ui-corner-all" id="fb">
-<h3>Section 1</h3>
-    <p>content 1</p>
-    <h3>Section 2</h3>
-    <p>content 2</p>
-    <h3>Section 3</h3>
-    <p>content 3</p>
+<h3>section 1</h3>
+    <div><p>content 1</p></div>
+    <h3>section 2</h3>
+    <div><p>content 2</p></div>
+    <h3>section 3</h3>
+    <div><p>content 3</p></div>
+</div>
 <div id="container">
 <div class="apl ui-corner-all" id="apl">
-<p>
-Apple.
-</p>
+<p>apple</p>
 </div>
 </div>
 <div class="msoft ui-corner-all" id="msoft">
@@ -71,8 +67,15 @@ Microsoft link.
 </div>
 <script>
 $(function(){
-
-    
+  
+    $("#fb").accordion({
+        collapsible: true,
+        icons: {
+            header:"ui-icon-circle-arrow-e",
+            activeHeader:"ui-icon-circle-arrow-s"
+        }
+    });
+});
 </script>
 </body>
 </html>
