@@ -18,8 +18,9 @@ width:auto;
 }
 .apl{
 background-color: rgb(222, 224, 85);
-height: 100px;
+height: auto;
 width: auto;
+padding: 10px;
 }
 .msoft{
 background-color: #31af37;
@@ -29,6 +30,18 @@ width: auto;
 #grt{
 background-color: #5a3479;
 }
+li{
+font-size: 2em;
+margin-bottom: 5px;
+text-align: center;
+}
+#list .ui-selecting{
+        background: #d77878;
+    }
+#list .ui-selected{
+        background: #79d7d3;
+    color: white;
+    }
 </style>
 <script
 src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jq
@@ -54,9 +67,11 @@ great
 </div>
 <div id="container">
 <div class="apl ui-corner-all" id="apl">
-<p>
-Apple.
-</p>
+<ul id="list">
+    <li class="ui-state-default">audi</li>
+    <li class="ui-state-default">bmw</li>
+    <li class="ui-state-default">mercedes</li>
+    </ul>
 </div>
 </div>
 <div class="msoft ui-corner-all" id="msoft">
@@ -73,7 +88,7 @@ Microsoft link.
 <script>
 $(function(){
 
-    
+   $("#list").selectable();    
 });
 </script>
 </body>
