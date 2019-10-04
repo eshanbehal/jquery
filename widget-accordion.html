@@ -41,14 +41,25 @@ src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3
 </script>
 </head>
 <body>
-<div class="fb ui-corner-all" id="fb">
+<div id="resizer">
+    <div class="fb ui-corner-all" id="fb">
 <h3>section 1</h3>
-    <div><p>content 1</p></div>
+    <div>
+        <p>content 1</p>
+        <p>content 1</p>
+        <p>content 1</p>
+        <p>content 1</p>
+        <p>content 1</p>
+        <p>content 1</p>
+        <p>content 1</p>
+    
+    </div>
     <h3>section 2</h3>
     <div><p>content 2</p></div>
     <h3>section 3</h3>
     <div><p>content 3</p></div>
 </div>
+    </div>
 <div id="container">
 <div class="apl ui-corner-all" id="apl">
 <p>apple</p>
@@ -73,8 +84,16 @@ $(function(){
         icons: {
             header:"ui-icon-circle-arrow-e",
             activeHeader:"ui-icon-circle-arrow-s"
+        },
+        heightStyle: "fill"
+    });
+    
+    $("#resizer").resizable({
+        resize: function(){
+            $("#fb").accordion("refresh");
         }
     });
+    
 });
 </script>
 </body>
