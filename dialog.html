@@ -84,7 +84,18 @@ $(function(){
     
     $("button").button();
     
-    $("#confirmation").dialog();
+    $("#confirmation").dialog({
+        autoOpen: false,
+        modal: true,
+        buttons: {
+            "go to previous page": function(){
+                window.history.back();
+            },
+            "cancel": function(){
+                $(this).dialog("close");
+            }
+        }
+    });
     
     $("#goToPreviousPage").click(function(){
         $("#confirmation").dialog("open");
