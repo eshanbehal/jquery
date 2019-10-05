@@ -76,9 +76,16 @@ $(function(){
        showWeek: true,
        buttonImage: "images/download.png",
        buttonImageOnly: true,
-       buttonText: "choose your departure date"
+       buttonText: "choose your departure date",
+       onClose: function(selectedDate){
+           $("#return").datepicker("option", "minDate", selectedDate)
+       }
+       
+       
    }); 
-   $("#return").datepicker(); 
+   $("#return").datepicker({
+       dateFormat: "d M, y"
+   }); 
     
 });
 </script>
