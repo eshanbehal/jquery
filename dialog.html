@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>
-widget-datepicker in jquery.
+widget-dialog in jquery.
 </title>
 <script
 src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jq
@@ -43,8 +43,7 @@ src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3
 </head>
 <body>
 <div class="fb ui-corner-all" id="fb">
-    <p>flight departure date: <input id="departure"></p>
-    <p>flight return date: <input id="return"></p>
+    <p>facebook</p>
     </div>
     
     
@@ -64,32 +63,7 @@ src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3
     
 $(function(){
  
-   $("#departure").datepicker({
-       
-       showAnim: "fadeIn",
-       changeYear: true,
-       numberOfMonths: 2,
-       dateFormat: "d M, y",
-       minDate: +1,
-       maxDate: "+12M +10D",
-       showOn: "button",
-       showWeek: true,
-       buttonImage: "images/download.png",
-       buttonImageOnly: true,
-       buttonText: "choose your departure date",
-       onClose: function(selectedDate){
-           $("#return").datepicker("option", "minDate", selectedDate)
-       }
-       
-       
-   }); 
-   $("#return").datepicker({
-       dateFormat: "d M, y",
-       showAnim: "fadeIn",
-       changeYear: true,
-       numberOfMonths: 2
-   }); 
-    
+   
 });
 </script>
 </body>
