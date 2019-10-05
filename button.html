@@ -61,9 +61,28 @@ Microsoft link.
 </a>
 </p>
 </div>
+    <button id="button1">button1</button>
+    <button id="button2">button2</button>
+    <button id="button3">button3</button>
 <script>
 $(function(){
  
+    $("#button1").button();
+    
+    $("#button2").button({
+        icons: {
+            primary: "ui-icon-folder-open"
+        },
+        text: false
+    });
+    
+    $("#button3").button({
+        
+        icons: {
+            primary: "ui-icon-folder-open",
+            secondary: "ui-icon-mail-closed"
+        }
+    });
 });
 </script>
 </body>
