@@ -62,7 +62,12 @@ src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3
     <p>welcome to our page.</p>
     </div>
     
+    <div id="confirmation" title="leave the page?">
+    <p><span class="ui-icon ui-icon-alert"></span>you will loose all unsaved work..are you sure?</p>
+    </div>
+    
     <button id="open">open dialog</button>
+    <button id="goToPreviousPage">go to previous page</button>
     
     
 <script>
@@ -78,6 +83,12 @@ $(function(){
     });
     
     $("button").button();
+    
+    $("#confirmation").dialog();
+    
+    $("#goToPreviousPage").click(function(){
+        $("#confirmation").dialog("open");
+    });
    
 });
 </script>
