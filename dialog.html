@@ -58,11 +58,26 @@ src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3
     
 </div>
     
+    <div id="myDialog" title="this is a dialogbox.">
+    <p>welcome to our page.</p>
+    </div>
+    
+    <button id="open">open dialog</button>
+    
     
 <script>
     
 $(function(){
- 
+ $("#myDialog").dialog({
+     autoOpen: false
+ });
+    
+    $("#open").click(function(){
+        
+        $("#myDialog").dialog("open");
+    });
+    
+    $("button").button();
    
 });
 </script>
