@@ -57,7 +57,20 @@ src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3
     </div>
     </div>
 <div class="apl ui-corner-all" id="apl">
-<p>apple</p>
+<form>
+    <div id="radioBoxes">
+    
+        <input type="radio" id="radiobox1" name="radioBoxes">
+        <label for="radiobox1">ferrari</label>
+        
+        <input type="radio" id="radiobox2" name="radioBoxes">
+        <label for="radiobox2">porshe</label>
+        
+        <input type="radio" id="radiobox3" name="radioBoxes">
+        <label for="radiobox3">toyota</label>
+    </div>
+    
+    </form>
 </div>
 <div class="msoft ui-corner-all" id="msoft">
 <input type="checkbox" id="myCheckbox">
@@ -88,6 +101,8 @@ $(function(){
     
     $("#myCheckbox").button();
     $("#checkboxes").buttonset();
+    $("#radioBoxes").buttonset();
+    
     
 });
 </script>
