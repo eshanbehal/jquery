@@ -43,23 +43,25 @@ src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3
 </head>
 <body>
 <div class="fb ui-corner-all" id="fb">
-    <p>facebook</p>
-<p>input your city: <input id="city"></p>
+    <div id="checkboxes">
+
+        <input type="checkbox" id="checkbox1">
+        <label for="checkbox1">audi</label>
+        
+        <input type="checkbox" id="checkbox2">
+        <label for="checkbox2">bmw</label>
+        
+        <input type="checkbox" id="checkbox3">
+        <label for="checkbox3">mercedes</label>
     
+    </div>
     </div>
 <div class="apl ui-corner-all" id="apl">
 <p>apple</p>
 </div>
 <div class="msoft ui-corner-all" id="msoft">
-<p>
-Microsoft.
-</p>
-<p>
-<a id="microsoftLink"
-href="http://www.microsoft.com" title="Microsoft">
-Microsoft link.
-</a>
-</p>
+<input type="checkbox" id="myCheckbox">
+    <label for="myCheckbox">checkbox</label>
 </div>
     <button id="button1">button1</button>
     <button id="button2">button2</button>
@@ -83,6 +85,10 @@ $(function(){
             secondary: "ui-icon-mail-closed"
         }
     });
+    
+    $("#myCheckbox").button();
+    $("#checkboxes").buttonset();
+    
 });
 </script>
 </body>
