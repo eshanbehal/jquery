@@ -71,8 +71,15 @@ src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3
 <script>
     
 $(function(){
- $("#slider").slider();
+ $("#slider").slider({
+     slide: function(event, ui){
+         $("#sliderValue").val(ui.value);
+     }, 
+     min: 0,
+     max:50
+ });
   
+    $("#sliderValue").val(0);
 });
 </script>
 </body>
