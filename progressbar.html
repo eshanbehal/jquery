@@ -55,13 +55,23 @@ src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3
 <div class="msoft ui-corner-all" id="msoft">
 <p>microsoft</p>
     
-</div>   
+</div> 
+    
+    <div id="progress">
+    
+    <div id="label"></div>
+    </div>
+    
+    <button>run</button>
     
 <script>
     
 $(function(){
  
-   
+   $("#progress").progressbar({
+       
+       value: 25
+   });
 });
 </script>
 </body>
