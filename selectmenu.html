@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>
+select menus in jquery.
+</title>
+<script
+src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jq
+uery.min.js">
+</script>
+<style>
+.fb{
+background-color: #3A5795;
+color: white;
+height: auto;
+width:auto;
+}
+.apl{
+background-color: rgb(222, 224, 85);
+height: auto;
+width: auto;
+padding: 10px;
+}
+.msoft{
+background-color: #31af37;
+height: auto;
+width: auto;
+}
+
+</style>
+<script
+src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jq
+uery.min.js">
+</script>
+<link rel="stylesheet"
+href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.
+3/themes/smoothness/jquery-ui.css" />
+<script
+src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3
+/jquery-ui.min.js">
+</script>
+</head>
+<body>
+<div class="fb ui-corner-all" id="fb">
+    <label for="strength">Select your biggest strength.</label>
+<select id="strength" name="strength">
+    
+    <option>motivation</option>
+    <option>creativity</option>
+    <option selected="selected">modesty</option>
+    <option>curiosity</option>
+    <option>honesty</option>
+    </select>
+    </div>
+    
+    
+<div class="apl ui-corner-all" id="apl">
+<p>apple</p>
+</div>
+    
+    
+<div class="msoft ui-corner-all" id="msoft">
+<p>microsoft</p>
+    
+</div> 
+    
+    <div id="progress">
+    
+    <div id="label"></div>
+    </div>
+    
+    <button>run</button>
+    
+<script>
+    
+$(function(){
+ 
+   $("#progress").progressbar({
+       
+       value: 0
+   });
+    
+    var x = 0;
+    $("button").click(function(){
+        
+        $("#label").text("In progress.....");
+        
+      setTimeout(function(){
+          
+            var progress = setInterval(function(){
+            
+            x++;
+            
+            $("#label").text(x+ '%');
+            $("#progress").progressbar("option", "value", x);
+            
+            if(x>99){
+                clearInterval(progress);
+            }
+        }, 100);
+      }, 1000);
+    });
+});
+</script>
+</body>
+</html>
