@@ -70,7 +70,23 @@ src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3
     
     
 <div class="apl ui-corner-all" id="apl">
-<p>apple</p>
+<ul id="fruits2">
+    <li class="ui-widget-header">apple</li>
+        <li>red apple
+            <ul>
+            <li>kashmir apple</li>
+            <li>salooni apple</li>
+            <li>punjab apple</li>
+            </ul>
+        <li>green apple</li>
+        <li>hybrid apple</li>
+        
+        </li>
+    <li class="ui-widget-header">orange</li>
+    <li class="ui-widget-header">mango</li>
+    <li class="ui-widget-header">banana</li>
+    <li class="ui-widget-header">kiwi</li>
+    </ul>
     
 </div>
     
@@ -85,6 +101,8 @@ src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3
 $(function(){
  
     $("#fruits").menu();
+    $("#fruits2").menu();
+    
     
 });
 </script>
