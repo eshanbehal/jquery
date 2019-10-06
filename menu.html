@@ -27,6 +27,10 @@ background-color: #31af37;
 height: auto;
 width: auto;
 }
+    
+    .ui-menu{
+        width: 100px;
+    }
 
 </style>
 <script
@@ -43,7 +47,25 @@ src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3
 </head>
 <body>
 <div class="fb ui-corner-all" id="fb">
-    <p>facebook</p>
+    <ul id="fruits">
+    <li>apple
+        <ul>
+        <li>red apple
+            <ul>
+            <li>kashmir apple</li>
+            <li>salooni apple</li>
+            <li>punjab apple</li>
+            </ul>
+            </li>
+        <li>green apple</li>
+        <li>hybrid apple</li>
+        </ul>
+        </li>
+    <li>orange</li>
+    <li>mango</li>
+    <li>banana</li>
+    <li>kiwi</li>
+    </ul>
     </div>
     
     
@@ -62,6 +84,7 @@ src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3
     
 $(function(){
  
+    $("#fruits").menu();
     
 });
 </script>
