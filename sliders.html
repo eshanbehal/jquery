@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>
+sliders in jquery.
+</title>
+<script
+src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jq
+uery.min.js">
+</script>
+<style>
+.fb{
+background-color: #3A5795;
+color: white;
+height: auto;
+width:auto;
+}
+.apl{
+background-color: rgb(222, 224, 85);
+height: auto;
+width: auto;
+padding: 10px;
+}
+.msoft{
+background-color: #31af37;
+height: auto;
+width: auto;
+}
+    #sliderValue{
+        color:#2de1c0;
+        border: 0;
+        font-weight: bold;
+    }
+    
+    
+
+</style>
+<script
+src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jq
+uery.min.js">
+</script>
+<link rel="stylesheet"
+href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.
+3/themes/smoothness/jquery-ui.css" />
+<script
+src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3
+/jquery-ui.min.js">
+</script>
+</head>
+<body>
+<div class="fb ui-corner-all" id="fb">
+    <p>fb</p>
+    </div>
+    
+    
+<div class="apl ui-corner-all" id="apl">
+<p>apple</p>
+</div>
+    
+    
+<div class="msoft ui-corner-all" id="msoft">
+<p>microsoft</p>
+</div>
+    
+    <div id="slider"> </div>
+    <label for="slider">value:</label>
+        
+    <input type="text" id="sliderValue" readonly>
+    
+<script>
+    
+$(function(){
+ $("#slider").slider();
+  
+});
+</script>
+</body>
+</html>
