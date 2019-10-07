@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>
+tabs in jquery.
+</title>
+<script
+src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jq
+uery.min.js">
+</script>
+<style>
+.fb{
+background-color: #3A5795;
+color: white;
+height: auto;
+width:auto;
+}
+.apl{
+background-color: rgb(222, 224, 85);
+height: auto;
+width: auto;
+padding: 10px;
+}
+.msoft{
+background-color: #31af37;
+height: auto;
+width: auto;
+}
+</style>
+<script
+src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jq
+uery.min.js">
+</script>
+<link rel="stylesheet"
+href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.
+3/themes/smoothness/jquery-ui.css" />
+<script
+src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3
+/jquery-ui.min.js">
+</script>
+</head>
+<body>
+<div class="fb ui-corner-all" id="fb">
+    <p>
+    fb
+    </p>
+    </div>
+    
+    
+<div class="apl ui-corner-all" id="apl">
+<ul>
+    <li><a href="#tab1">tab1</a></li>
+    <li><a href="#tab2">tab2</a></li>
+    <li><a href="#tab3">tab3</a></li>
+    </ul>
+    
+    <div id="tab1">content1</div>
+    <div id="tab2">content2</div>
+    <div id="tab3">content3</div>
+</div>
+    
+    
+<div class="msoft ui-corner-all" id="msoft">
+<p>microsoft</p>
+</div>
+
+<script>
+    
+$(function(){
+ 
+    $("#apl").tabs({
+    collapsible: true,
+        event: "mouseover"
+    });
+    
+    $("#apl").tabs().find(".ui-tabs-nav").sortable({
+        axis: "x"
+    });
+    
+});
+</script>
+</body>
+</html>
