@@ -27,7 +27,7 @@ background-color: #31af37;
 height: auto;
 width: auto;
 }
-    #sliderValue, #rangeSlider{
+    #sliderValue, #mileageRange{
         color:#2de1c0;
         border: 0;
         font-weight: bold;
@@ -93,12 +93,12 @@ $(function(){
         step: 1000,
         slide: function(event,ui){
             
-            $("#mileageRange").val(ui.values[0]+ "miles - " + ui.values[1]+ "miles");
-        },
+            $("#mileageRange").val(ui.values[0]+ " miles - " + ui.values[1]+ " miles");
+        }
     });
     $("#mileageRange").val(
-    $("rangeSlider").slider("values", 0)+ "miles - " + 
-    $("rangeSlider").slider("values", 1)+ "miles"
+    $("rangeSlider").slider("values",0)+ "miles - " + 
+    $("rangeSlider").slider("values",1)+ "miles"
     );
 });
 </script>
