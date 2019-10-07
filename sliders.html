@@ -27,7 +27,7 @@ background-color: #31af37;
 height: auto;
 width: auto;
 }
-    #sliderValue{
+    #sliderValue, #rangeSlider{
         color:#2de1c0;
         border: 0;
         font-weight: bold;
@@ -63,10 +63,14 @@ src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3
 <p>microsoft</p>
 </div>
     
-    <div id="slider"> </div>
+    <div id="slider"></div>
     <label for="slider">value:</label>
-        
     <input type="text" id="sliderValue" readonly>
+    
+    <div id="rangeSlider"></div>
+    <label for="rangeSlider">mileage:</label>
+    <input type="text" id="mileageRange" readonly>
+    
     
 <script>
     
@@ -80,6 +84,22 @@ $(function(){
  });
   
     $("#sliderValue").val(0);
+    
+    $("#rangeSlider").slider({
+        range: true,
+        min: 0,
+        max: 100000,
+        values: [0, 10000],
+        step: 1000,
+        slide: function(event,ui){
+            
+            $("#mileageRange").val(ui.values[0]+ "miles - " + ui.values[1]+ "miles");
+        },
+    });
+    $("#mileageRange").val(
+    $("rangeSlider").slider("values", 0)+ "miles - " + 
+    $("rangeSlider").slider("values", 1)+ "miles"
+    );
 });
 </script>
 </body>
